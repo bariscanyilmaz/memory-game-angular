@@ -48,7 +48,7 @@ import {
     faSpaceShuttle,
     faTruckMonster,
     faVirus,
-    faWifi
+    faWifi,faQuestion
 
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -96,6 +96,6 @@ export const icons = [faAirbnb,
     faTelegram,
     faTwitter,
     faXbox,
-    faYoutube];
+    faYoutube,faQuestion];
 
 
