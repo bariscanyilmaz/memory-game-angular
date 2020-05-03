@@ -1,6 +1,10 @@
-<div class="card">
-    <div class="front">Rocket</div>
-    <div class="back">
-        <fa-icon [icon]="['fas', 'rocket']" size="3x"></fa-icon>
+<div class="card" [ngClass]="{rotated: isRotated}">
+    <div class="card-inner" >
+        <div class="front">
+            <fa-icon [icon]="icon" size="3x"></fa-icon>
+        </div>
+        <div class="back">
+            <fa-icon [icon]="['fas', 'question']" size="3x"></fa-icon>
+        </div>
     </div>
 </div>

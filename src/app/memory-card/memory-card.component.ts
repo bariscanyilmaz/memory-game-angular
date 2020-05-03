@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {  } from "@fortawesome/free-solid-svg-icons";
+import { Component, OnInit, Input } from '@angular/core';
+
 @Component({
   selector: 'memory-card',
   templateUrl: './memory-card.component.html',
@@ -9,7 +9,13 @@ export class MemoryCardComponent implements OnInit {
 
   constructor() { }
 
+  @Input() type='fas';
+  @Input() code='rocket';
+  icon=[this.type,this.code];
+  isRotated;
+
   ngOnInit(): void {
   }
-
+  
+  
 }
