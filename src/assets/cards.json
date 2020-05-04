@@ -1,0 +1,190 @@
+[
+    {
+        "type": "fab",
+        "code": "airbnb"
+    },
+    {
+        "type": "fab",
+        "code": "amazon"
+    },
+    {
+        "type": "fab",
+        "code": "apple"
+    },
+    {
+        "type": "fab",
+        "code": "angular"
+    },
+    {
+        "type": "fab",
+        "code": "bitcoin"
+    },
+    {
+        "type": "fas",
+        "code": "brain"
+    },
+    {
+        "type": "fas",
+        "code": "bug"
+    },
+    {
+        "type": "fas",
+        "code": "car"
+    },
+    {
+        "type": "fas",
+        "code": "cloud-moon"
+    },
+    {
+        "type": "fab",
+        "code": "dev"
+    },
+    {
+        "type": "fas",
+        "code": "dice-six"
+    },
+    {
+        "type": "fab",
+        "code": "docker"
+    },
+    {
+        "type": "fab",
+        "code": "edge"
+    },
+    {
+        "type": "fab",
+        "code": "dropbox"
+    },
+    {
+        "type": "fab",
+        "code": "evernote"
+    },
+    {
+        "type": "fas",
+        "code": "fire"
+    },
+    {
+        "type": "fas",
+        "code": "fist-raised"
+    },
+    {
+        "type": "fas",
+        "code": "ghost"
+    },
+    {
+        "type": "fab",
+        "code": "github"
+    },
+    {
+        "type": "fab",
+        "code": "google"
+    },
+    {
+        "type": "fas",
+        "code": "grin-squint"
+    },
+    {
+        "type": "fab",
+        "code": "gulp"
+    },
+    {
+        "type": "fas",
+        "code": "heartbeat"
+    },
+    {
+        "type": "fas",
+        "code": "hippo"
+    },
+    {
+        "type": "fas",
+        "code": "head-side-cough-slash"
+    },
+    {
+        "type": "fab",
+        "code": "html5"
+    },
+    {
+        "type": "fab",
+        "code": "instagram"
+    },
+    {
+        "type": "fab",
+        "code": "js"
+    },
+    {
+        "type": "fab",
+        "code": "linkedin"
+    },
+    {
+        "type": "fab",
+        "code": "lyft"
+    },
+    {
+        "type": "fab",
+        "code": "medium"
+    },
+    {
+        "type": "fas",
+        "code": "meteor"
+    },
+    {
+        "type": "fas",
+        "code": "moon"
+    },
+    {
+        "type": "fas",
+        "code": "peace"
+    },
+    {
+        "type": "fas",
+        "code": "radiation"
+    },
+    {
+        "type": "fab",
+        "code": "redhat"
+    },
+    {
+        "type": "fas",
+        "code": "rocket"
+    },
+    {
+        "type": "fas",
+        "code": "skull"
+    },
+    {
+        "type": "fab",
+        "code": "spotify"
+    },
+    {
+        "type": "fas",
+        "code": "space-shuttle"
+    },
+    {
+        "type": "fab",
+        "code": "telegram"
+    },
+    {
+        "type": "fas",
+        "code": "truck-monster"
+    },
+    {
+        "type": "fab",
+        "code": "twitter"
+    },
+    {
+        "type": "fas",
+        "code": "virus"
+    },
+    {
+        "type": "fas",
+        "code": "wifi"
+    },
+    {
+        "type": "fab",
+        "code": "xbox"
+    },
+    {
+        "type": "fab",
+        "code": "youtube"
+    }
+]
