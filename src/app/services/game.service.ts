@@ -5,7 +5,7 @@ import { Card } from '../card';
 @Injectable({
   providedIn: 'root'
 })
-export class GameServiceService {
+export class GameService {
 
   constructor(private http: HttpClient) {
 
