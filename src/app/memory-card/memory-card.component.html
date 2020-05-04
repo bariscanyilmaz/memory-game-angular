@@ -1,4 +1,4 @@
-<div class="card" [ngClass]="{rotated: isRotated}">
+<div class="card" [ngClass]="{rotated: isRotated}" (click)="onClick()">
     <div class="card-inner" >
         <div class="front">
             <fa-icon [icon]="icon" size="3x"></fa-icon>

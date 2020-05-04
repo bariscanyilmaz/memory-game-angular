@@ -35,11 +35,6 @@ $blue: #6fb1fc;
     color: $orange;
   }
 
-  &:hover {
-    .card-inner {
-      transform: rotateY(180deg);
-    }
-  }
 }
 
 .card-inner {

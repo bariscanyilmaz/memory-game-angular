@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Card } from '../card';
 
 @Component({
   selector: 'app-board',
@@ -12,4 +13,6 @@ export class BoardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  cards:Card[]=[];
+  
 }

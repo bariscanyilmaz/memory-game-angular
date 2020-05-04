@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { icons } from "../app/icons";
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,4 +14,6 @@ export class AppComponent {
     
     library.addIcons(...icons);
   }
+
+
 }
