@@ -1,4 +1,7 @@
-.board{
-    display: flex;
-    flex-wrap: wrap;
+.board {
+  display: flex;
+  flex-wrap: wrap;
+}
+mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
 }

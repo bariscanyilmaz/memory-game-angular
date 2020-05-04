@@ -8,6 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BoardComponent } from './board/board.component';
 import { MemoryCardComponent } from './memory-card/memory-card.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { MatRadioModule } from "@angular/material/radio";
+import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -21,7 +24,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppRoutingModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatRadioModule, FormsModule, MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

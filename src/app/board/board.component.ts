@@ -9,14 +9,18 @@ import { GameService } from '../services/game.service';
 })
 export class BoardComponent implements OnInit {
 
-  constructor(private gameService:GameService) { }
+  constructor(private gameService: GameService) { }
+    
+  cardCount: number=8;
 
   ngOnInit(): void {
-    this.gameService.getCards(12).subscribe(r=>this.cards=r);
+    this.newGame();
   }
 
-  cards:Card[]=[];
+  cards: Card[] = [];
 
+  newGame(){
+    this.gameService.getCards(this.cardCount).subscribe(r => this.cards = r);
+  }
 
-  
 }
