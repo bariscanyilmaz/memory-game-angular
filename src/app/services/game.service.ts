@@ -21,7 +21,7 @@ export class GameService {
       this.shuffleCards(arr);
     }), map(d => {
       let arr = d.slice(0, count);
-      return [...this.shuffleCards(arr), ...arr]
+      return this.shuffleCards([ ...arr,...this.shuffleCards(arr)]);
     }
     ));
   }

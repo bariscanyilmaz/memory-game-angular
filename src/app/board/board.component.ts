@@ -12,7 +12,7 @@ export class BoardComponent implements OnInit {
   constructor(private gameService:GameService) { }
 
   ngOnInit(): void {
-    this.gameService.getCards(8).subscribe(r=>this.cards=r);
+    this.gameService.getCards(12).subscribe(r=>this.cards=r);
   }
 
   cards:Card[]=[];
