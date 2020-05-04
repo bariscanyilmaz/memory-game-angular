@@ -12,6 +12,7 @@ export class BoardComponent implements OnInit {
   constructor(private gameService:GameService) { }
 
   ngOnInit(): void {
+    this.gameService.cards().subscribe(d=>this.cards=d);
   }
 
   cards:Card[]=[];
