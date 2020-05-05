@@ -1,38 +1,40 @@
-import { Component, OnInit, Input, Output,EventEmitter, DoCheck } from '@angular/core';
+import { Component, OnInit, Input, DoCheck } from '@angular/core';
+import { GameService } from '../services/game.service';
+import { delay } from 'rxjs/operators';
+
 
 @Component({
   selector: 'memory-card',
   templateUrl: './memory-card.component.html',
   styleUrls: ['./memory-card.component.scss']
 })
-export class MemoryCardComponent implements OnInit,DoCheck {
+export class MemoryCardComponent implements OnInit, DoCheck {
 
-  constructor() { }
-  
+  constructor(private gameService: GameService) { }
 
-  @Input() type:string;
-  @Input() code:string;
 
-  @Output() rotated=new EventEmitter<MemoryCardComponent>();
+  @Input() type: string;
+  @Input() code: string;
+  @Input() id: number;
 
-  icon=[this.type,this.code];
-  isRotated:boolean;
+  icon = [this.type, this.code];
+  isRotated: boolean;
 
   ngOnInit(): void {
-    
-  }
-  
-  ngDoCheck(): void {
-   this.icon=[this.type,this.code];
-  }
-  
-  undo(){
-    this.isRotated=false;
+    this.gameService.coverCards$.pipe(delay(1200)).subscribe(r=>r.map(v=>this.isRotated=(v.id==this.id)?false:this.isRotated));
   }
 
-  onClick(){
-    this.isRotated=true;
-    this.rotated.emit(this);
+  ngDoCheck(): void {
+    this.icon = [this.type, this.code];
   }
-  
+
+  undo() {
+    this.isRotated = false;
+  }
+
+  onClick() {
+    this.isRotated = true;
+    this.gameService.controlCards({ id: this.id, code: this.code, type: this.type });
+  }
+
 }
