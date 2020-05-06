@@ -12,6 +12,8 @@ import { MatRadioModule } from "@angular/material/radio";
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from "@angular/material/button";
 import { MatDividerModule } from "@angular/material/divider";
+import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -26,8 +28,12 @@ import { MatDividerModule } from "@angular/material/divider";
     FontAwesomeModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatRadioModule, FormsModule, MatButtonModule,
-    MatDividerModule
+    MatRadioModule,
+    FormsModule,
+    MatButtonModule,
+    MatDividerModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

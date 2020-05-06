@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  remainingCardPairs: number;
+  doneMoves: number;
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  
 
 }
