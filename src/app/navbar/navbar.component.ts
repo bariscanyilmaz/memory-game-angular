@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.gameService.getRemainingCardPairs().subscribe(r=>this.remainingCardPairs=r);
-    this.gameService.getDoneMoves().pipe(delay(600)).subscribe( r=>this.doneMoves=r);
+    this.gameService.getDoneMoves().subscribe( r=>this.doneMoves=r);
   }
 
 

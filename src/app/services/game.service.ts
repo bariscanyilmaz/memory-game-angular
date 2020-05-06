@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Card } from '../card';
 import { tap, take, toArray, map, delay } from "rxjs/operators";
-import { BehaviorSubject, of } from 'rxjs';
+import { BehaviorSubject, of, pipe, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +12,8 @@ export class GameService {
   selectedCard1: Card = null;
   selectedCard2: Card = null;
 
-  cardCount: number=0;
-  moveCount: number=0;
+  cardCount: number = 0;
+  moveCount: number = 0;
 
   cards: Card[] = [];
   card$ = new BehaviorSubject<Card>(null);
@@ -29,9 +29,13 @@ export class GameService {
 
 
   getCards(count: number) {
+    
     this.cardCount = count;
+    this.moveCount=0;
+
     this.remainingCardPairs.next(this.cardCount);
-    this.doneMoves.next(this.moveCount);
+    this.doneMoves.next(0);
+
     return this.http.get<Card[]>('assets/cards.json').pipe(tap((arr) => {
       this.shuffleCards(arr);
     }), map(d => {
@@ -72,7 +76,11 @@ export class GameService {
       this.selectedCard1 = null;
       this.selectedCard2 = null;
       this.moveCount++;
-      this.doneMoves.next(this.moveCount);
+      setTimeout(() => {
+        this.doneMoves.next(this.moveCount);  
+      }, 1200);
+      
+
     }
 
   }
