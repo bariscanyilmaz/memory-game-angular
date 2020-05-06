@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GameService } from '../services/game.service';
+import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-navbar',
@@ -10,11 +12,13 @@ export class NavbarComponent implements OnInit {
   remainingCardPairs: number;
   doneMoves: number;
 
-  constructor() { }
+  constructor(private gameService:GameService) { }
 
   ngOnInit(): void {
+    this.gameService.getRemainingCardPairs().subscribe(r=>this.remainingCardPairs=r);
+    this.gameService.getDoneMoves().pipe(delay(1200)).subscribe( r=>this.doneMoves=r);
   }
 
-  
+
 
 }
