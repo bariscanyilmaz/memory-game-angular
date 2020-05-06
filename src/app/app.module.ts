@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MatRadioModule } from "@angular/material/radio";
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from "@angular/material/button";
+import { MatDividerModule } from "@angular/material/divider";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MatButtonModule } from "@angular/material/button";
     FontAwesomeModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatRadioModule, FormsModule, MatButtonModule
+    MatRadioModule, FormsModule, MatButtonModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

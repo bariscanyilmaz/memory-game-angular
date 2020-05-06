@@ -1,6 +1,26 @@
+
+.control-panel {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+
+  &.card-count{
+    margin-right: 10px;
+  }
+  
+  &.btn-new-game{
+    margin-left: 10px;
+  }
+}
+
 .board {
   display: flex;
   flex-wrap: wrap;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 mat-radio-button ~ .mat-radio-button {
   margin-left: 16px;

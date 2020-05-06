@@ -1,12 +1,14 @@
-<mat-radio-group [(ngModel)]="cardCount" aria-label="Select an option">
-    <mat-radio-button [value]="8">8</mat-radio-button>
-    <mat-radio-button [value]="12">12</mat-radio-button>
-    <mat-radio-button [value]="16">16</mat-radio-button>
-    <mat-radio-button [value]="24">24</mat-radio-button>
-</mat-radio-group>
-<button mat-button color="primary" (click)="newGame()">New Game</button>
+<div class="control-panel">
+    <mat-radio-group [(ngModel)]="cardCount" aria-label="Select an option" class="card-count">
+        <mat-radio-button [value]="8">8x2</mat-radio-button>
+        <mat-radio-button [value]="12">12x2</mat-radio-button>
+        <mat-radio-button [value]="16">16x2</mat-radio-button>
+        <mat-radio-button [value]="24">24x2</mat-radio-button>
+    </mat-radio-group>
+    <button class="btn-new-game" mat-button color="primary" (click)="newGame()">New Game</button>
+</div>
 
-
+<mat-divider></mat-divider>
 <div class="board">
     <memory-card *ngFor="let card of cards;let i=index" [id]="i" [type]="card.type" [code]="card.code"></memory-card>
 </div>
