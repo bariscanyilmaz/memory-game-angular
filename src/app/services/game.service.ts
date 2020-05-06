@@ -30,6 +30,8 @@ export class GameService {
 
   getCards(count: number) {
     this.cardCount = count;
+    this.remainingCardPairs.next(this.cardCount);
+    this.doneMoves.next(this.moveCount);
     return this.http.get<Card[]>('assets/cards.json').pipe(tap((arr) => {
       this.shuffleCards(arr);
     }), map(d => {

@@ -9,6 +9,6 @@
 </div>
 
 <mat-divider></mat-divider>
-<div class="board">
+<div class="board" [style.width.px]="boardWidth">
     <memory-card *ngFor="let card of cards;let i=index" [id]="i" [type]="card.type" [code]="card.code"></memory-card>
 </div>
