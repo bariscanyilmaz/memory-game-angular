@@ -21,8 +21,11 @@ export class BoardComponent implements OnInit {
   boardWidth: number;
 
   newGame() {
+    this.gameService.getCards(this.cardCount).subscribe(r => { this.cards = r;  this.calulateWidth()});
+  }
 
-    this.gameService.getCards(this.cardCount).subscribe(r => { this.cards = r;this.boardWidth=this.cardCount/2*90; });
+  calulateWidth(){
+    this.boardWidth=this.cardCount/2*90; 
   }
 
 
