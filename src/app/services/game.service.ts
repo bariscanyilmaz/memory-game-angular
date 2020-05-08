@@ -18,10 +18,9 @@ export class GameService {
   cards: Card[] = [];
   card = new BehaviorSubject<Card>(null);
 
-  coverCards = new BehaviorSubject<Card[]>([]);
-
-  remainingCardPairs = new BehaviorSubject<number>(8);
-  doneMoves = new BehaviorSubject<number>(0);
+  private coverCards = new BehaviorSubject<Card[]>([]);
+  private remainingCardPairs = new BehaviorSubject<number>(8);
+  private doneMoves = new BehaviorSubject<number>(0);
 
   constructor(private http: HttpClient) {
 
@@ -93,6 +92,9 @@ export class GameService {
     return this.doneMoves.asObservable();
   }
 
+  getCoveredCards(){
+    return this.coverCards.asObservable().pipe(delay(1200));
+  }
 
 
 
