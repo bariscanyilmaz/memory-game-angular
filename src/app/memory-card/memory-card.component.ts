@@ -21,7 +21,7 @@ export class MemoryCardComponent implements OnInit, DoCheck {
   isRotated: boolean;
 
   ngOnInit(): void {
-    this.gameService.coverCards$.pipe(delay(1200)).subscribe(r=>r.map(v=>this.isRotated=(v.id==this.id)?false:this.isRotated));
+    this.gameService.coverCards.pipe(delay(1200)).subscribe(r=>r.map(v=>this.isRotated=(v.id==this.id)?false:this.isRotated));
   }
 
   ngDoCheck(): void {

@@ -16,9 +16,9 @@ export class GameService {
   moveCount: number = 0;
 
   cards: Card[] = [];
-  card$ = new BehaviorSubject<Card>(null);
+  card = new BehaviorSubject<Card>(null);
 
-  coverCards$ = new BehaviorSubject<Card[]>([]);
+  coverCards = new BehaviorSubject<Card[]>([]);
 
   remainingCardPairs = new BehaviorSubject<number>(8);
   doneMoves = new BehaviorSubject<number>(0);
@@ -67,7 +67,7 @@ export class GameService {
 
       this.selectedCard2 = choosen;
       if (this.selectedCard1.code != this.selectedCard2.code) {
-        this.coverCards$.next([this.selectedCard1, this.selectedCard2]);
+        this.coverCards.next([this.selectedCard1, this.selectedCard2]);
       } else {
         this.cardCount--
         this.remainingCardPairs.next(this.cardCount);
